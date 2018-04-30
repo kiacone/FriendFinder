@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A \"dating\" app for friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiacone/FriendFinder.git"
+  },
+  "author": "Kristin Iacone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiacone/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/kiacone/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
