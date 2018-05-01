@@ -17,7 +17,7 @@
   <div id="index-banner" class="parallax-container survey">
     <div class="section no-pad-bot">
       <div class="container">
-        <h1 class="header center teal-text text-lighten-2">Friend Survey</h1>
+        <h1 class="header center black-text">Friend Survey</h1>
         <div class="row center">
           <h5 class="header col s12 light">Tell us a little about yourself.</h5>
         </div>
@@ -25,26 +25,25 @@
     </div>
     <div class="parallax"><img src="assets/images/ian-schneider-64307-unsplash.jpg" alt="Unsplashed background img 1"></div>
   </div>
-
   
-  <div class="row">
+  <div class="container">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate" id="name" required>
-          <label for="icon_prefix">Name</label>
+          <input id="name" type="text" class="validate" required aria-required="true">
+          <label for="name">Name</label>
         </div>
         <div class="input-field col s6">
-          <i class="material-icons prefix">Image</i>
-          <input id="icon_prefix" type="text" class="validate" id="photo" required>
-          <label for="icon_prefix">Link to Profile Image</label>
+          <i class="material-icons prefix">image</i>
+          <input id="photo" type="text" class="validate" required aria-required="true">
+          <label for="photo">Link to Profile Image</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q1"  required>
+          <select id="q1" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -58,7 +57,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q2"  required>
+          <select id="q2" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -72,7 +71,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q3"  required>
+          <select id="q3" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -86,7 +85,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q4"  required>
+          <select id="q4" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -100,7 +99,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q5"  required>
+          <select id="q5" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -114,7 +113,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q6"  required>
+          <select id="q6" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -128,7 +127,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q7"  required>
+          <select id="q7" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -142,7 +141,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q8"  required>
+          <select id="q8" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -156,7 +155,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q9"  required>
+          <select id="q9" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -170,7 +169,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <select id="q10"  required>
+          <select id="q10" required aria-required="true">
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -182,11 +181,11 @@
         </div>
       </div>
 
-      <button class="btn waves-effect waves-light modal-trigger" type="submit" data-target="modal1" id="submitButton">Submit <i class="material-icons right">send</i></button>
+      <button class="btn modal-trigger black lighten-1" type="submit" data-target="matchModal" id="submitButton">Submit <i class="material-icons right">send</i></button>
     </form>
   </div>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer black">
     <div class="footer-copyright">
       <div class="container">
         <a href="/api/friends">API Friends List</a> | <a href="https://github.com/kiacone/FriendFinder" target= "_blank">GitHub Repo</a>
@@ -195,14 +194,14 @@
   </footer>
 
   <!-- Materialize Modal Structure -->
-  <div id="modal1" class="modal">
+  <div id="matchModal" class="modal">
     <div class="modal-content">
-      <h4>We've Found a Match!</h4>
-      <h5 id="matchName"></h5>
-      <img id="matchPic" src="" alt="No Image" width = 250px>
+      <h2>You've got a Match!</h2>
+      <h3 id="friendNameMatch"></h3>
+      <img id="friendPicMatch" src="" alt="" width="250">
     </div>
     <div class="modal-footer">
-      <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+      <a href="#" class="modal-action modal-close btn-flat">Done</a>
     </div>
   </div>
 
@@ -215,17 +214,16 @@
  <script>
   // load materialize component js
   $(document).ready(function () {
-            $('.parallax').parallax();
-            $('select').formSelect();
-            $('.modal').modal();
-        });
+    $('.parallax').parallax();
+    $('select').formSelect();
+    $('.modal').modal();
+  });
         
-        //click handler for the button
-        $('#submitButton').on("click", function () {
-    event.preventDefault();
-    console.log($('#name').val());
-
-    var newFriend = {
+  //click handler for the button
+  $('#submitButton').on("click", function () {
+  event.preventDefault();
+   
+    var friendData = {
       name: $('#name').val().trim(),
       photoURL: $('#photo').val().trim(),
       scores: [
@@ -243,14 +241,14 @@
     };
 
     // AJAX post the data to the friends API.
-    $.post("/api/friends", newFriend, function(data) {
+    $.post("/api/friends", friendData, function(data) {
       
       // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-      $("#matchName").text(data.name);
-      $("#matchPic").attr("src", data.photoURL);
+      $("#friendNameMatch").text(data.name);
+      $("#friendPicMatch").attr("src", data.photoURL);
     });     
   });
   </script>
 
-  </body>
+</body>
 </html> 

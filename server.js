@@ -4,7 +4,6 @@
 --------------------------------------------- */
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require('path');
 
 /* ---------------------------------------------
   EXPRESS CONFIGURATION
@@ -20,13 +19,9 @@ var PORT = process.env.PORT || 8080;
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// app.use(bodyParser.text());
-// app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-
-
+// Enabling Express to serve static files.
 app.use(express.static('app/public'));
-
 
 /* ---------------------------------------------
   ROUTER
