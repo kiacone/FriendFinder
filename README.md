@@ -6,7 +6,7 @@ Compatibility-based "FriendFinder" application -- basically a dating app. This f
 
 ### Built With
 
-HTML | CSS | JavaScript | Node.js | Express | JSON | Materialize
+HTML | CSS | JavaScript | Node.js | Express | JSON | Bootstrap
 
 NPM packages used
 
